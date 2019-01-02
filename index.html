@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body onload="xxx()">
+		<center>
+			<from name="ss">
+				<input type="text" name="t1" maxlength=“256”size="38" /><br/>
+				<input type="text" name="t2" maxlength=“256”size="38" /><br/>
+			</from>
+		</center>
+		<script>
+			var a = 0;
+			  var p= 0;
+				function xxx() {
+					var dd1 = "你好，欢迎光临文字跑马灯！"
+					var dd2 = "请问有什么需要帮助的吗？"
+					var dd3 = dd1 + dd2;
+					document.getElementsByName("t1").value = dd3
+					
+					var dd4 = "法国红酒看来更可能大大大大大大大"
+					document.getElementsByName("t2").value= dd4
+					var speed = 10;
+					if(p++ == dd3.length) {
+						p = 0;
+					}
+					a = setTimeout("xxx()", 3000 / speed);
+				}
+		</script>
+	</body>
+
+</html>
